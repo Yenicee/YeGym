@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Aca se mostrara la lista de clientes</h1>
+
+    {% for cliente in lista_cliente %}
+    <ul>
+        <li> Nombre: {{cliente.nombre}}, Direccion: {{cliente.direccion}}, dni: {{cliente.dni}}</li>
+    </ul>
+    {% endfor %}
+
+</body>
+
+</html>
