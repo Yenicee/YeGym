@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
+        
         {% load static %}
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -12,6 +14,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'blog/css/styles.css' %} "rel ="stylesheet" />
     </head>
+    
     <body>
         <!-- Responsive navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -45,6 +48,7 @@
                     <h1 class="fw-bolder">GIMNASIO</h1>
                     <p class="lead mb-0">Lo mejor de la vida está más allá de tu zona de confort.</p>
                 </div>
+                
             </div>
         </header>
         <!-- Page content-->
@@ -102,6 +106,8 @@
                     <div class="card mb-4">
                         <div class="card-header">Buscar</div>
                         <div class="card-body">
+                        <form action="{% url 'search-by-name-post' %}" method="get"></form>
+                        {% csrf_token %}
                             <div class="input-group">
                                 <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
                                 <button class="btn btn-primary" id="button-search" type="button">OK!!</button>
