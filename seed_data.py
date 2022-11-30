@@ -7,7 +7,11 @@ cliente(nombre="Uder", direccion="La Prida 543", dni=217621).save()
 
 print("Se cargo con exito clientes de prueba")
 
+from blog.models import Post
 
+Post(title="Mi post", short_content="un post", content="si sale todo bien esto se va a mostrar").save()
+
+print("Se cargo con éxito los post de pruebas")
 
 
 

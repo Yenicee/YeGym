@@ -17,8 +17,11 @@ def index(request):
 @login_required
 def index(request):
     return render(request, 'blog/index.html')
+    posts = Post.objects.order_by('-date_published').all()
+    return render(request, 'blog/index.html', {"posts": posts})
+  
 
-class ListPost(LoginRequiredMixin, ListView):
+class ListPost(ListView):
     model=Post
 
 class CreatePost(CreateView):

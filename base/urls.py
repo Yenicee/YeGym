@@ -20,12 +20,15 @@ from django.urls import path, include
 from registro_clientes.views import mostrar_inicio, registrar_cliente
 from blog.views import index as blog_index
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("inicio/", mostrar_inicio),
     path("registro/", registrar_cliente),
-    path("blog/", blog_index),
-    path("blog1/", include('blog.urls')),
+    path("blog/", include('blog.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if not settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
