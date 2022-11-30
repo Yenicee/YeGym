@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+    Lista de Rutinas basicas
 <body>
-    <a href="{% url 'blog-logout' %}">Salir</a>
-
+    
+    <a href="{% url 'index-blog' %}">Volver</a>
     <ul>
     {% for post in object_list %}
         <li>{{post}} 
-@@ -16,7 +18,7 @@
+
     {% endfor %}
     </ul>
 
     <a href="{% url 'create-post'%}">Crear un nuevo post</a>
-    <a href="{% url 'create-post' %}">Crear un nuevo post</a>
 
 </body>
 </html>
