@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Gimnasio - Inicio</title>
+        <title>blog</title><h1>YeGym</h1>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="https://i.pinimg.com/originals/f0/ee/cf/f0eecff8f557c63bca90b7b738c3df73.png" />
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -63,6 +63,7 @@
                             <div class="small text-muted">Lunes y Jueves - 18:00hrs</div>
                             <h2 class="card-title">Yoga</h2>
                             <p class="card-text">El yoga es una disciplina tradicional espiritual, física y mental originada en la India.</p>
+                            Libera todo tu ser con esta tendencia.
                         </div>
                     </div>
                     <!-- Nested row for non-featured blog posts-->
@@ -92,9 +93,10 @@
                             <div class="card mb-4">
                                 <a href="#!"><img class="card-img-top" src="http://cdn.shopify.com/s/files/1/2618/5696/files/zumba-fitnes.jpg?v=1572249561" alt="..." /></a>
                                 <div class="card-body">
-                                    <div class="small text-muted">Miercoles - 16:00hrs</div>
+                                    <div class="small text-muted">Horario libre</div>
                                     <h2 class="card-title h4">Zumba</h2>
                                     <p class="card-text">es una disciplina deportiva que se imparte en clases dirigidas en la que se realizan ejercicios aeróbicos al ritmo de música latina (merengue, samba, reggaeton, cumbia y salsa) con la finalidad de perder peso de forma divertida y mejorar el estado de ánimo de los deportistas.</p>
+                                    <a class="btn btn-primary" href="{% url 'list-post' %}">Read more →</a>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +111,7 @@
                         <form action="{% url 'search-by-name-post' %}" method="get"></form>
                         {% csrf_token %}
                             <div class="input-group">
-                                <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
+                                <input class="form-control" type="text" placeholder="Enter search..." aria-label="Enter search term..." aria-describedby="button-search" />
                                 <button class="btn btn-primary" id="button-search" type="button">OK!!</button>
                             </div>
                         </div>
