@@ -51,7 +51,7 @@ class SearchPostByName(ListView):
 
 class BlogLogin(LoginView):
     template_name = 'blog/blog_login.html'
-    next_page = reverse_lazy("list-post")
+    next_page = reverse_lazy("index-blog")
 
 class BlogLogout(LogoutView):
     template_name = 'blog/blog_logout.html'

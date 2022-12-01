@@ -25,6 +25,7 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/blog/">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/inicio/">Conocenos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/blog/list/">Posteos</a></li>
                         <li class="btn btn-primary" href="http://127.0.0.1:8000/blog1/signup">Registrarse</a></li>
                         {% if not request.user.is_authenticated %}
                         <a class="btn btn-primary" href="{% url 'blog-login' %}">Iniciar Sesion</a>
@@ -96,23 +97,7 @@
                                     <div class="small text-muted">Horario libre</div>
                                     <h2 class="card-title h4">Zumba</h2>
                                     <p class="card-text">es una disciplina deportiva que se imparte en clases dirigidas en la que se realizan ejercicios aeróbicos al ritmo de música latina (merengue, samba, reggaeton, cumbia y salsa) con la finalidad de perder peso de forma divertida y mejorar el estado de ánimo de los deportistas.</p>
-                                    <a class="btn btn-primary" href="{% url 'list-post' %}">Read more →</a>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Side widgets-->
-                <div class="col-lg-4">
-                    <!-- Search widget-->
-                    <div class="card mb-4">
-                        <div class="card-header">Buscar</div>
-                        <div class="card-body">
-                        <form action="{% url 'search-by-name-post' %}" method="get"></form>
-                        {% csrf_token %}
-                            <div class="input-group">
-                                <input class="form-control" type="text" placeholder="Enter search..." aria-label="Enter search term..." aria-describedby="button-search" />
-                                <button class="btn btn-primary" id="button-search" type="button">OK!!</button>
                             </div>
                         </div>
                     </div>
